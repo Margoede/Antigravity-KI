@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local_path: './*'
-          remote_path: '/public_html/'
+          remote_path: '/domains/svtester.cfmoto-atv-motorrad.de/public_html/'
           sftp_only: true
