@@ -1,0 +1,44 @@
+# CFMOTO Portfolio Landingpage
+
+Eine moderne, hochwertig animierte Landingpage-Sektion, die das Motorrad-Portfolio von CFMOTO (NK, SR, MT, CL-X/C) eindrucksvoll für deine Firmenhomepage präsentiert. 
+
+Wie gewünscht wird diese Sektion absichtlich ohne Header, Footer und Navigation konzipiert, sodass du sie nahtlos als "Content-Block" (z.B. per iFrame oder direktem HTML-Import) in deine bestehende Webseite einfügen kannst.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Bitte prüfe folgende Punkte, bevor ich mit der Programmierung und Bildgenerierung beginne:
+> 1. Bist du mit den 4 Hauptkategorien (Naked/NK, Sport/SR, Adventure/MT, Classic/CL) für die Darstellung einverstanden?
+> 2. Ich werde ein besonders edles, dunkles Design ("Dark Mode", "Glassmorphismus") verwenden, um einen "WOW"-Effekt zu erzielen. Passt das zu eurer restlichen Homepage?
+> 3. Ich werde echte Motorrad-Bilder mittels KI generieren, damit wir keine grauen Platzhalter verwenden müssen. 
+
+## Proposed Changes
+
+### Web Design (HTML/CSS)
+Wir erstellen zwei Dateien im aktuellen Ordner:
+
+#### [NEW] [index.html](file:///c:/Users/auzmo/OneDrive/Desktop/Antigravity%20KI-Ordner/index.html)
+Das Grundgerüst der Landingpage. Struktur der Karten, Textinhalte für die einzelnen Motorrad-Kategorien und Einbindung der Bilder.
+
+#### [NEW] [style.css](file:///c:/Users/auzmo/OneDrive/Desktop/Antigravity%20KI-Ordner/style.css)
+Die Vanilla CSS-Datei für alle Styling- und Animations-Informationen. 
+- Nutzung modernster CSS Grid/Flexbox Layouts.
+- CSS-Transitions und 3D-Hover-Effekte auf den Portfolio-Karten.
+- Farbschema: Tiefes Anthrazit/Schwarz mit dem typischen CFMOTO-Blaukragen als Akzentfarbe ("#00AEEF" oder ähnlich).
+
+### Medien (Bilder)
+Ich werde vier hochwertige Bilder für die unterschiedlichen Kategorien generieren, um das Portfolio lebendig darzustellen.
+
+#### [NEW] nk_naked_bike.jpg (Generiert)
+#### [NEW] sr_sports_bike.jpg (Generiert)
+#### [NEW] mt_adventure_bike.jpg (Generiert)
+#### [NEW] cl_classic_bike.jpg (Generiert)
+
+## Open Questions
+
+Keine – sobald du das Go gibst, fange ich mit der Generierung der Bilder und dem Schreiben des Codes an!
+
+## Verification Plan
+
+### Manual Verification
+- Die generierte HTML-Datei kann lokal im Browser (.html doppelklicken) geöffnet werden, um die Animationen und das Layout direkt zu testen.
