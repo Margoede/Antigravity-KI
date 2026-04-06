@@ -12,12 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Find remote path and deploy
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_path: './*'
-          remote_path: '/domains/svtester.cfmoto-atv-motorrad.de/public_html/'
-          sftp_only: true
+          source: 'index.html,style.css,main.js,Hero/*,Images/*'
+          target: '/domains/svtester.cfmoto-atv-motorrad.de/public_html'
