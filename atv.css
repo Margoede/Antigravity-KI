@@ -1,0 +1,397 @@
+/* =============================================
+   ATV PAGE – ATV.CSS
+   ============================================= */
+
+/* ---------- ATV HERO ---------- */
+.atv-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-top: var(--nav-h);
+}
+
+.atv-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('Images/atv/CFORCE-1000-TOURING_Granite-Ridge_Left45_premium-1.png') center/contain no-repeat,
+              linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  background-position: 75% center;
+}
+
+.atv-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(13,13,13,0.95) 0%,
+    rgba(13,13,13,0.7) 40%,
+    rgba(13,13,13,0.2) 100%
+  );
+}
+
+.atv-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+  width: 100%;
+}
+
+.atv-hero-title {
+  font-family: var(--font-cond);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--cf-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.atv-hero-desc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+/* ---------- FILTER BAR ---------- */
+.atv-filter-bar {
+  background: var(--cf-dark-2);
+  padding: 40px 24px;
+  border-bottom: 1px solid var(--cf-border);
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 100;
+}
+
+.atv-filter-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.atv-filter-title {
+  font-family: var(--font-cond);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--cf-white);
+  letter-spacing: -0.01em;
+}
+
+.atv-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cf-gray-lt);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  color: var(--cf-white);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.filter-btn.active {
+  background: var(--cf-primary);
+  color: var(--cf-white);
+  border-color: var(--cf-primary);
+}
+
+/* ---------- PRODUCT GRID ---------- */
+.atv-grid-section {
+  background: var(--cf-dark);
+  padding: 60px 24px 80px;
+}
+
+.atv-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ---------- PRODUCT CARD ---------- */
+.atv-card {
+  background: var(--cf-dark-3);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--cf-border);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.atv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border-color: rgba(0,229,204,0.3);
+}
+
+/* Badge */
+.atv-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--cf-primary);
+  color: var(--cf-white);
+  border-radius: 2px;
+}
+
+.atv-card-badge.badge-mid {
+  background: #3b82f6;
+}
+
+.atv-card-badge.badge-premium {
+  background: var(--cf-accent);
+  color: var(--cf-dark);
+}
+
+/* Card Image */
+.atv-card-img {
+  position: relative;
+  padding: 30px 20px 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.atv-card-img img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.atv-card:hover .atv-card-img img {
+  transform: scale(1.06);
+}
+
+/* Card Content */
+.atv-card-content {
+  padding: 20px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.atv-card-title {
+  font-family: var(--font-cond);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--cf-white);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.atv-card-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cf-primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+/* Specs Row */
+.atv-card-specs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--cf-border);
+  border-bottom: 1px solid var(--cf-border);
+  padding: 12px 0;
+}
+
+.spec-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+}
+
+.spec-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 1px;
+  background: var(--cf-border);
+}
+
+.spec-value {
+  font-family: var(--font-cond);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cf-white);
+}
+
+.spec-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--cf-gray);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.atv-card-desc {
+  font-size: 0.88rem;
+  color: var(--cf-gray-lt);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.atv-card-cta {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--cf-primary);
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.atv-card-cta:hover {
+  color: var(--cf-accent);
+  transform: translateX(4px);
+}
+
+/* ---------- CTA BANNER ---------- */
+.atv-cta-section {
+  background: var(--cf-dark-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.atv-cta-section::before {
+  content: 'CFORCE';
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  font-family: var(--font-cond);
+  font-size: clamp(6rem, 15vw, 14rem);
+  font-weight: 900;
+  color: rgba(255,255,255,0.02);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.atv-cta-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px;
+}
+
+.atv-cta-content {
+  max-width: 560px;
+}
+
+.atv-cta-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---------- HIDDEN STATE (filter) ---------- */
+.atv-card.hidden {
+  display: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .atv-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atv-hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .atv-hero-bg {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .atv-hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(13,13,13,0.95) 0%,
+      rgba(13,13,13,0.6) 50%,
+      rgba(13,13,13,0.3) 100%
+    );
+  }
+
+  .atv-hero-content {
+    padding: 0 24px 50px;
+  }
+
+  .atv-filter-bar {
+    position: relative;
+    top: 0;
+  }
+
+  .atv-filter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .atv-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .atv-cta-inner {
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atv-card-specs {
+    gap: 0;
+  }
+
+  .atv-cta-buttons {
+    flex-direction: column;
+  }
+}
