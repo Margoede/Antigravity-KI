@@ -17,7 +17,7 @@
   position: absolute;
   inset: 0;
   background: url('Images/atv/CFORCE-1000-TOURING_Granite-Ridge_Left45_premium-1.png') center/contain no-repeat,
-              linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+              linear-gradient(135deg, #f4f4f4 0%, #e8e8e8 100%);
   background-position: 75% center;
 }
 
@@ -26,9 +26,9 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(13,13,13,0.95) 0%,
-    rgba(13,13,13,0.7) 40%,
-    rgba(13,13,13,0.2) 100%
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.7) 40%,
+    rgba(255,255,255,0.1) 100%
   );
 }
 
@@ -46,14 +46,14 @@
   font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 900;
   line-height: 0.95;
-  color: var(--cf-white);
+  color: var(--cf-dark);
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
 
 .atv-hero-desc {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.7);
+  color: #555;
   line-height: 1.7;
   max-width: 480px;
   margin-bottom: 28px;
@@ -356,9 +356,9 @@
   .atv-hero-overlay {
     background: linear-gradient(
       to top,
-      rgba(13,13,13,0.95) 0%,
-      rgba(13,13,13,0.6) 50%,
-      rgba(13,13,13,0.3) 100%
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,255,255,0.6) 50%,
+      rgba(255,255,255,0.2) 100%
     );
   }
 
