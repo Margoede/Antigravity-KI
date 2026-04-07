@@ -1,0 +1,33 @@
+{
+  "color": {
+    "primary": {
+      "default": "#00e5cc",
+      "dark": "#00c4ad",
+      "description": "Teal – Haupt-Markenfarbe für CTAs, Buttons, Akzente"
+    },
+    "accent": {
+      "default": "#c8f400",
+      "description": "Neon-Gelb – Logo-Highlights, Titel-Akzente"
+    },
+    "neutral": {
+      "dark": "#0d0d0d",
+      "dark-2": "#111111",
+      "dark-3": "#1a1a1a",
+      "white": "#ffffff",
+      "offwhite": "#f4f4f4",
+      "gray": "#888888",
+      "gray-light": "#bbbbbb",
+      "border": "rgba(255,255,255,0.1)"
+    },
+    "semantic": {
+      "success": "#22C55E",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "typography": {
+    "font-display": "'Barlow Condensed', sans-serif",
+    "font-body": "'Barlow', sans-serif"
+  }
+}
