@@ -61,9 +61,9 @@
 
 /* ---------- FILTER BAR ---------- */
 .atv-filter-bar {
-  background: var(--cf-dark-2);
+  background: #ffffff;
   padding: 40px 24px;
-  border-bottom: 1px solid var(--cf-border);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   position: sticky;
   top: var(--nav-h);
   z-index: 100;
@@ -83,7 +83,7 @@
   font-family: var(--font-cond);
   font-size: 1.8rem;
   font-weight: 800;
-  color: var(--cf-white);
+  color: var(--cf-dark);
   letter-spacing: -0.01em;
 }
 
@@ -100,17 +100,17 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--cf-gray-lt);
+  color: #555;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: 3px;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .filter-btn:hover {
-  color: var(--cf-white);
-  border-color: rgba(255,255,255,0.4);
+  color: var(--cf-dark);
+  border-color: rgba(0,0,0,0.4);
 }
 
 .filter-btn.active {
@@ -121,7 +121,7 @@
 
 /* ---------- PRODUCT GRID ---------- */
 .atv-grid-section {
-  background: var(--cf-dark);
+  background: var(--cf-offwhite);
   padding: 60px 24px 80px;
 }
 
@@ -135,10 +135,10 @@
 
 /* ---------- PRODUCT CARD ---------- */
 .atv-card {
-  background: var(--cf-dark-3);
+  background: #ffffff;
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid var(--cf-border);
+  border: 1px solid rgba(0,0,0,0.08);
   transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s ease, border-color 0.4s ease;
   display: flex;
   flex-direction: column;
@@ -147,8 +147,8 @@
 
 .atv-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  border-color: rgba(0,229,204,0.3);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  border-color: rgba(0,229,204,0.4);
 }
 
 /* Badge */
@@ -180,7 +180,7 @@
 .atv-card-img {
   position: relative;
   padding: 30px 20px 10px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, transparent 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +193,7 @@
   height: auto;
   object-fit: contain;
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
 }
 
 .atv-card:hover .atv-card-img img {
@@ -212,7 +212,7 @@
   font-family: var(--font-cond);
   font-size: 1.8rem;
   font-weight: 800;
-  color: var(--cf-white);
+  color: var(--cf-dark);
   letter-spacing: -0.01em;
   line-height: 1.1;
 }
@@ -230,8 +230,8 @@
   display: flex;
   gap: 0;
   margin-bottom: 16px;
-  border-top: 1px solid var(--cf-border);
-  border-bottom: 1px solid var(--cf-border);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   padding: 12px 0;
 }
 
@@ -251,14 +251,14 @@
   top: 2px;
   bottom: 2px;
   width: 1px;
-  background: var(--cf-border);
+  background: rgba(0,0,0,0.08);
 }
 
 .spec-value {
   font-family: var(--font-cond);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--cf-white);
+  color: var(--cf-dark);
 }
 
 .spec-label {
@@ -271,7 +271,7 @@
 
 .atv-card-desc {
   font-size: 0.88rem;
-  color: var(--cf-gray-lt);
+  color: #555;
   line-height: 1.6;
   margin-bottom: 18px;
   flex: 1;
