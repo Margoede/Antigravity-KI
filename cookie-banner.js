@@ -5,9 +5,8 @@
 (function() {
   'use strict';
 
-  // Prüfe ob bereits eine Einwilligung gespeichert ist
-  var consent = localStorage.getItem('cookie_consent');
-  if (consent) return;
+  // Banner erstellen (entweder beim ersten Besuch oder bei erneutem Öffnen)
+  function createBanner() {
 
   // Banner HTML erstellen
   var bannerHTML = ''
@@ -114,6 +113,29 @@
   // Nur notwendige
   rejectBtn.addEventListener('click', function() {
     saveConsent('necessary', false, false);
+  });
+
+  }
+
+  // Beim ersten Besuch automatisch anzeigen
+  if (!localStorage.getItem('cookie_consent')) {
+    createBanner();
+  }
+
+  // Footer-Link "Cookies" → Banner erneut öffnen
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href="#cookies"]');
+    if (link) {
+      e.preventDefault();
+      // Alten Consent entfernen damit Banner neu erstellt wird
+      localStorage.removeItem('cookie_consent');
+      // Falls Banner schon im DOM ist, entfernen
+      var old = document.getElementById('cookie-banner');
+      var oldOverlay = document.getElementById('cookie-overlay');
+      if (old) old.remove();
+      if (oldOverlay) oldOverlay.remove();
+      createBanner();
+    }
   });
 
 })();
