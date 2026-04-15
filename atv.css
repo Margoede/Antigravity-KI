@@ -176,6 +176,21 @@
   color: var(--cf-dark);
 }
 
+.atv-card-badge.badge-sold-out {
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  right: auto;
+  background: rgba(229, 57, 53, 0.92);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  z-index: 5;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
 /* Card Image */
 .atv-card-img {
   position: relative;
@@ -190,6 +205,7 @@
 .atv-card-img img {
   width: 100%;
   max-width: 360px;
+  max-height: 220px;
   height: auto;
   object-fit: contain;
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
