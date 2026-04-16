@@ -178,17 +178,17 @@
 
 .atv-card-badge.badge-sold-out {
   left: 50%;
-  top: 40%;
+  top: 50%;
   transform: translate(-50%, -50%) rotate(-15deg);
   right: auto;
   background: rgba(229, 57, 53, 0.92);
   color: #fff;
-  padding: 14px 32px;
-  border-radius: 6px;
-  font-size: 1.4rem;
-  letter-spacing: 0.08em;
+  padding: 22px 56px;
+  border-radius: 8px;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
   z-index: 5;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
 /* Card Image */
