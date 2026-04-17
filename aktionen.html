@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktuelle Aktionen & Angebote CFMOTO | Gödecke Auto & Zweirad</title>
+  <meta name="description" content="Aktuelle CFMOTO Aktionen und Sonderangebote bei Gödecke Auto & Zweirad. Jetzt sparen auf Motorräder, ATVs und Buggys.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detail.css">
+  <style>
+    .aktionen-hero {
+      padding: 140px 5% 60px;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+      text-align: center;
+    }
+    .aktionen-hero .section-eyebrow { color: var(--cf-primary); }
+    .aktionen-hero-title {
+      font-family: var(--font-cond);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .aktionen-hero-desc {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .aktionen-section {
+      padding: 80px 5%;
+      background: #f8f8f8;
+    }
+    .aktionen-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .aktion-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .aktion-card-img {
+      position: relative;
+    }
+    .aktion-card-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .aktion-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #e53935;
+      color: #fff;
+      font-family: var(--font-cond);
+      font-size: 1.4rem;
+      font-weight: 800;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      transform: rotate(-3deg);
+      box-shadow: 0 4px 12px rgba(229,57,53,0.4);
+      line-height: 1.2;
+      text-align: center;
+    }
+    .aktion-badge small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      opacity: 0.9;
+    }
+    .aktion-card-content { display: flex; flex-direction: column; gap: 16px; }
+    .aktion-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cf-primary);
+    }
+    .aktion-title {
+      font-family: var(--font-cond);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--cf-dark);
+      line-height: 1.1;
+    }
+    .aktion-subtitle {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #555;
+    }
+    .aktion-desc {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.7;
+    }
+    .aktion-price {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .aktion-price-old {
+      font-size: 1.1rem;
+      color: #999;
+      text-decoration: line-through;
+    }
+    .aktion-price-new {
+      font-family: var(--font-cond);
+      font-size: 2rem;
+      font-weight: 900;
+      color: #e53935;
+    }
+    .aktion-price-note {
+      font-size: 0.8rem;
+      color: #777;
+    }
+    .aktion-highlights {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .aktion-highlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 12px 18px;
+      min-width: 80px;
+    }
+    .aktion-highlight-value {
+      font-family: var(--font-cond);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--cf-dark);
+    }
+    .aktion-highlight-label {
+      font-size: 0.7rem;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .aktion-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 8px;
+    }
+    .aktion-valid {
+      font-size: 0.8rem;
+      color: #999;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .aktion-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+      }
+      .aktion-title { font-size: 1.8rem; }
+      .aktion-price-new { font-size: 1.6rem; }
+      .aktion-highlights { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#aktionen" class="skip-link">Zum Inhalt springen</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav-header scrolled" id="main-nav">
+    <nav class="nav-inner" aria-label="Hauptnavigation">
+      <a href="index.html" class="nav-logo" aria-label="Gödecke Auto & Zweirad Startseite">
+        <img src="Images/godecke-logo.png" alt="Gödecke Auto & Zweirad" class="nav-logo-img">
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="motorraeder.html" class="nav-link">Motorräder</a></li>
+        <li><a href="atv.html" class="nav-link">ATV</a></li>
+        <li><a href="buggy.html" class="nav-link">Buggys</a></li>
+        <li><a href="probefahrt.html" class="nav-link">Probefahrt</a></li>
+        <li><a href="index.html#mx" class="nav-link">CFMOTO Racing</a></li>
+      </ul>
+      <button class="burger" id="burger-btn" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="aktionen-hero" id="aktionen">
+    <p class="section-eyebrow">Gödecke Auto & Zweirad</p>
+    <h1 class="aktionen-hero-title">Aktuelle Aktionen & Angebote</h1>
+    <p class="aktionen-hero-desc">Profitieren Sie von unseren limitierten CFMOTO Sonderangeboten. Solange der Vorrat reicht.</p>
+  </section>
+
+  <!-- ===================== AKTIONEN ===================== -->
+  <section class="aktionen-section">
+    <div class="aktionen-grid">
+
+      <!-- AKTION 1: 1000MT-X -->
+      <article class="aktion-card">
+        <div class="aktion-card-img">
+          <img src="Images/aktionen/1000mt-x-aktion.png" alt="CFMOTO 1000MT-X – Aktion: 1.000 € Rabatt zur Markteinführung">
+          <div class="aktion-badge">
+            - € 1.000<br>
+            <small>Markteinführung</small>
+          </div>
+        </div>
+        <div class="aktion-card-content">
+          <p class="aktion-eyebrow">Neuheit 2026</p>
+          <h2 class="aktion-title">CFMOTO 1000MT-X</h2>
+          <p class="aktion-subtitle">Adventure Flaggschiff – Markteinführungspreis</p>
+          <p class="aktion-desc">
+            Komfort trifft Abenteuerlust: Die neue 1000MT-X kombiniert einen kraftvollen 946-cm³-Parallel-Twin mit 112 PS,
+            KYB-Fahrwerk, Brembo-Bremsen und Bosch Kurven-ABS. Dazu 230 mm Federweg, 8-Zoll TFT-Display und 4 Jahre Garantie.
+            Zur Markteinführung sparen Sie <strong>1.000 €</strong> auf die UVP.
+          </p>
+          <div class="aktion-price">
+            <span class="aktion-price-old">UVP € 10.999,–</span>
+            <span class="aktion-price-new">€ 9.999,–</span>
+          </div>
+          <p class="aktion-price-note">Markteinführungspreis, gültig bis 01.06.2026 oder solange Vorrat reicht.</p>
+          <div class="aktion-highlights">
+            <div class="aktion-highlight">
+              <span class="aktion-highlight-value">946cc</span>
+              <span class="aktion-highlight-label">Hubraum</span>
+            </div>
+            <div class="aktion-highlight">
+              <span class="aktion-highlight-value">112 PS</span>
+              <span class="aktion-highlight-label">Leistung</span>
+            </div>
+            <div class="aktion-highlight">
+              <span class="aktion-highlight-value">222 kg</span>
+              <span class="aktion-highlight-label">Gewicht</span>
+            </div>
+            <div class="aktion-highlight">
+              <span class="aktion-highlight-value">4 Jahre</span>
+              <span class="aktion-highlight-label">Garantie</span>
+            </div>
+          </div>
+          <div class="aktion-actions">
+            <a href="probefahrt.html" class="btn btn-primary">Probefahrt anfragen</a>
+            <a href="1000mt-x.html" class="btn btn-outline" style="color:var(--cf-dark);border-color:var(--cf-dark);">Alle Details →</a>
+          </div>
+          <p class="aktion-valid">Aktion gültig bis 01.06.2026 · Begrenzte Stückzahl</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="detail-cta">
+    <div class="detail-cta-inner">
+      <div class="detail-cta-content">
+        <p class="section-eyebrow light">Interesse geweckt?</p>
+        <h2 class="section-title light">Jetzt <strong>Probefahrt</strong> vereinbaren</h2>
+        <p class="section-desc light">Erleben Sie unsere Aktionsmodelle live bei Gödecke Auto & Zweirad.</p>
+        <div class="detail-cta-buttons">
+          <a href="probefahrt.html" class="btn btn-primary">Probefahrt anfragen</a>
+          <a href="index.html" class="btn btn-outline">Zur Startseite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="main-footer" id="footer">
+    <div class="footer-inner">
+
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Fahrzeuge</h4>
+          <ul>
+            <li><a href="motorraeder.html">Motorräder</a></li>
+            <li><a href="atv.html">ATV</a></li>
+            <li><a href="buggy.html">Buggys</a></li>
+          </ul>
+        </div>
+
+
+
+    <div class="footer-bottom">
+      <p>&copy; A&amp;Z 2025–2026 Bilder CFMOTO. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Cookies</a>
+      </div>
+    </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="cookie-banner.css">
+  <script src="cookie-banner.js"></script>
+</body>
+</html>
