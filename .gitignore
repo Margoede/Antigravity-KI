@@ -2,3 +2,14 @@
 .vscode/
 design-system/
 skills-lock.json
+
+# Standalone Showcase-Sites mit eigenen Repos
+betamotor/
+goes/
+royalenfield/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
