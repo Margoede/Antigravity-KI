@@ -8,7 +8,7 @@
 :root {
   --cf-primary:       #00e5cc;
   --cf-primary-dark:  #00c4ad;
-  --cf-accent:    #c8f400;   /* neon-yellow accent (logo/title highlights) */
+  --cf-accent:    #006F62;   /* Pantone 2229 C · Deep Teal accent (logo/title highlights, focus rings) */
   --cf-white:     #ffffff;
   --cf-offwhite:  #f4f4f4;
   --cf-dark:      #0d0d0d;

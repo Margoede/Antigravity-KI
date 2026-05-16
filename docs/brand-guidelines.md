@@ -9,7 +9,7 @@
 |---------|-------|
 | Primary Color | #00e5cc (Teal) |
 | Primary Dark | #00c4ad (Teal Dark) |
-| Accent Color | #c8f400 (Neon-Gelb) |
+| Accent Color | #006F62 (Pantone 2229 C · Deep Teal) |
 | Primary Font | Barlow |
 | Display Font | Barlow Condensed |
 | Voice | Kraftvoll, Abenteuerlich, Premium |
@@ -27,9 +27,9 @@
 
 ### Accent Color
 
-| Name | Hex | RGB | Verwendung |
-|------|-----|-----|------------|
-| Neon-Gelb | #c8f400 | rgb(200, 244, 0) | Logo-Highlights, Titel-Akzente, Focus-Ringe |
+| Name | Hex | RGB | Pantone | Verwendung |
+|------|-----|-----|---------|------------|
+| Deep Teal | #006F62 | rgb(0, 111, 98) | Pantone 2229 C | Logo-Highlights, Titel-Akzente, Focus-Ringe |
 
 ### Neutral Palette – Dark Theme
 
@@ -84,7 +84,7 @@
 |-----------|--------|--------|
 | Dominant | 60-70% | Dark Theme (#0d0d0d, #111, #1a1a1a) |
 | Primär | 15-20% | Teal (#00e5cc) |
-| Akzent | 5-10% | Neon-Gelb (#c8f400) |
+| Akzent | 5-10% | Deep Teal (#006F62 · Pantone 2229 C) |
 | Neutral | 10-15% | Weiß, Offwhite, Grau-Töne |
 
 ---
@@ -119,7 +119,7 @@
   /* Primary */
   --cf-primary:       #00e5cc;
   --cf-primary-dark:  #00c4ad;
-  --cf-accent:        #c8f400;
+  --cf-accent:        #006F62;
 
   /* Neutral – Dark */
   --cf-dark:          #0d0d0d;
