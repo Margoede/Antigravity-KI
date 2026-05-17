@@ -1,7 +1,7 @@
 # Brand Guidelines – Gödecke Auto & Zweirad × CFMOTO
 
-> Last updated: 2026-04-07
-> Status: v1.0
+> Last updated: 2026-05-17
+> Status: v1.1
 
 ## Quick Reference
 
@@ -139,4 +139,6 @@
 }
 ```
 
-> **Status:** Variablen wurden von `--cf-red` zu `--cf-primary` refactored (2026-04-07).
+> **Changelog:**
+> - **v1.1 · 2026-05-17:** Primary-Farbe von Teal `#00e5cc` auf Blau `#028ae4` umgestellt (Primary Dark `#00c4ad` → `#0274c4`). Accent-Farbe von Neon-Gelb `#c8f400` auf Deep Teal `#006F62` (Pantone 2229 C) umgestellt.
+> - **v1.0 · 2026-04-07:** Variablen von `--cf-red` zu `--cf-primary` refactored.
