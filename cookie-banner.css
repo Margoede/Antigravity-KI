@@ -182,39 +182,58 @@
   white-space: nowrap;
 }
 
+/* Primärer Zustimmungs-Button (Teal) */
 .cookie-btn-accept {
   background: var(--cf-primary);
   color: #fff;
   border-color: var(--cf-primary);
 }
 
-.cookie-btn-accept:hover {
+.cookie-btn-accept:hover,
+.cookie-btn-accept:focus-visible {
   background: var(--cf-primary-dark);
   border-color: var(--cf-primary-dark);
   transform: translateY(-1px);
+  outline: none;
 }
 
-.cookie-btn-save {
+/* Ablehnungs-Button — visuell gleichwertig zur Zustimmung (Dark, gefüllt) */
+.cookie-btn-reject {
   background: var(--cf-dark);
   color: #fff;
   border-color: var(--cf-dark);
 }
 
-.cookie-btn-save:hover {
+.cookie-btn-reject:hover,
+.cookie-btn-reject:focus-visible {
   background: #222;
+  border-color: #222;
   transform: translateY(-1px);
+  outline: none;
 }
 
-.cookie-btn-reject {
+/* Sekundärer Speichern-Button (Ghost) — nur sinnvoll nach Detail-Auswahl */
+.cookie-btn-save {
   background: transparent;
   color: #555;
   border-color: rgba(0,0,0,0.15);
 }
 
-.cookie-btn-reject:hover {
+.cookie-btn-save:hover,
+.cookie-btn-save:focus-visible {
   border-color: rgba(0,0,0,0.4);
   color: var(--cf-dark);
+  outline: none;
 }
+
+/* Fokus-Sichtbarkeit für alle Buttons */
+.cookie-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 229, 204, 0.35);
+}
+
+/* Label-Wrapper für Kategorien — Klick auf die ganze Karte aktiviert die Checkbox */
+label.cookie-category { cursor: pointer; }
+label.cookie-category:has(input:disabled) { cursor: default; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
