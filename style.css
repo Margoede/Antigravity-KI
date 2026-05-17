@@ -6,8 +6,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cf-primary:       #00e5cc;
-  --cf-primary-dark:  #00c4ad;
+  --cf-primary:       #028ae4;
+  --cf-primary-dark:  #0274c4;
   --cf-accent:    #006F62;   /* Pantone 2229 C · Deep Teal accent (logo/title highlights, focus rings) */
   --cf-white:     #ffffff;
   --cf-offwhite:  #f4f4f4;

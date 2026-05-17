@@ -223,7 +223,7 @@
 .pf-field select:focus,
 .pf-field textarea:focus {
   border-color: var(--cf-primary);
-  box-shadow: 0 0 0 3px rgba(0, 229, 204, 0.15);
+  box-shadow: 0 0 0 3px rgba(2, 138, 228, 0.15);
 }
 
 .pf-field input::placeholder,

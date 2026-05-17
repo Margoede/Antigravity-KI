@@ -7,8 +7,8 @@
 
 | Element | Value |
 |---------|-------|
-| Primary Color | #00e5cc (Teal) |
-| Primary Dark | #00c4ad (Teal Dark) |
+| Primary Color | #028ae4 (Blau) |
+| Primary Dark | #0274c4 (Blau Dark) |
 | Accent Color | #006F62 (Pantone 2229 C · Deep Teal) |
 | Primary Font | Barlow |
 | Display Font | Barlow Condensed |
@@ -22,8 +22,8 @@
 
 | Name | Hex | RGB | Verwendung |
 |------|-----|-----|------------|
-| Teal (Primär) | #00e5cc | rgb(0, 229, 204) | CTAs, Buttons, Akzente, Links |
-| Teal Dark | #00c4ad | rgb(0, 196, 173) | Hover-States, Hervorhebungen |
+| Blau (Primär) | #028ae4 | rgb(2, 138, 228) | CTAs, Buttons, Akzente, Links |
+| Blau Dark | #0274c4 | rgb(2, 116, 196) | Hover-States, Hervorhebungen |
 
 ### Accent Color
 
@@ -83,7 +83,7 @@
 | Kategorie | Anteil | Farben |
 |-----------|--------|--------|
 | Dominant | 60-70% | Dark Theme (#0d0d0d, #111, #1a1a1a) |
-| Primär | 15-20% | Teal (#00e5cc) |
+| Primär | 15-20% | Blau (#028ae4) |
 | Akzent | 5-10% | Deep Teal (#006F62 · Pantone 2229 C) |
 | Neutral | 10-15% | Weiß, Offwhite, Grau-Töne |
 
@@ -117,8 +117,8 @@
 ```css
 :root {
   /* Primary */
-  --cf-primary:       #00e5cc;
-  --cf-primary-dark:  #00c4ad;
+  --cf-primary:       #028ae4;
+  --cf-primary-dark:  #0274c4;
   --cf-accent:        #006F62;
 
   /* Neutral – Dark */
